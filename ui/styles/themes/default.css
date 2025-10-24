@@ -1,0 +1,100 @@
+/**
+ * Default Theme - стандартная тема Airy
+ */
+
+:root {
+    /* Цвета текста */
+    --text-color: #6c86ba;
+    --text-color-light: #8a9fc4;
+    
+    /* Цвета индикатора */
+    --indicator-color: #88a3d4;
+    --indicator-glow: rgba(136, 163, 212, 0.5);
+    
+    /* Цвета облака - определяются в cloud.css для каждого состояния */
+}
+
+/* Состояние idle */
+body[data-state="idle"] {
+    --indicator-color: #88a3d4;
+    --indicator-glow: rgba(136, 163, 212, 0.5);
+}
+
+/* Состояние listening */
+body[data-state="listening"] {
+    --text-color: #5080ff;
+    --indicator-color: #5080ff;
+    --indicator-glow: rgba(80, 128, 255, 0.8);
+}
+
+body[data-state="listening"] .indicator {
+    animation: pulseIndicator 1.5s ease-in-out infinite;
+}
+
+/* Состояние thinking */
+body[data-state="thinking"] {
+    --text-color: #b478ff;
+    --indicator-color: #b478ff;
+    --indicator-glow: rgba(180, 120, 255, 0.8);
+}
+
+body[data-state="thinking"] .indicator {
+    animation: rotateIndicator 2s linear infinite;
+}
+
+/* Состояние speaking */
+body[data-state="speaking"] {
+    --text-color: #64c896;
+    --indicator-color: #64c896;
+    --indicator-glow: rgba(100, 200, 150, 0.8);
+}
+
+body[data-state="speaking"] .indicator {
+    animation: speakIndicator 0.8s ease-in-out infinite;
+}
+
+/* Анимации индикатора */
+@keyframes pulseIndicator {
+    0%, 100% { 
+        transform: scale(1); 
+        opacity: 1; 
+    }
+    50% { 
+        transform: scale(1.5); 
+        opacity: 0.7; 
+    }
+}
+
+@keyframes rotateIndicator {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes speakIndicator {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(1.3); }
+    75% { transform: scale(0.8); }
+}
+
+/* Анимации уведомлений */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(-50%) translateY(-20px);
+    }
+}

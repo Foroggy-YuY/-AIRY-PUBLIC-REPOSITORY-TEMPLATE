@@ -1,0 +1,9 @@
+# Зависимости для разработки
+-r requirements.txt
+
+# Тестирование
+pytest>=7.0.0
+pytest-cov>=4.0.0
+
+# Сборка
+pyinstaller>=5.0.0
