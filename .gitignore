@@ -1,25 +1,44 @@
-# виртуальное окружение
-.venv/
-venv/
-
-# кэш и временные файлы
+@"
+# Python
 __pycache__/
-*.pyc
-*.pyo
-*.log
-*.tmp
+*.py[cod]
+*$py.class
+*.so
+.Python
 
-# модели и данные
-models/
-assets/cache/
-logs/
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
 
-# настройки среды
-.env
-*.env
+# PyInstaller
+build/
+dist/
+*.spec
 
-# системные файлы Windows/VSCode
-.DS_Store
-Thumbs.db
+# IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
+
+# Package files
+*.egg-info/
+.eggs/
+
+"@ | Out-File -FilePath ".gitignore" -Encoding UTF8
