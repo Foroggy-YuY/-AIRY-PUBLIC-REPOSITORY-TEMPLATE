@@ -4,7 +4,7 @@
 ### Визуальная оболочка офлайн-ассистента «Айри»
 
 <p align="center">
-  <img src="assets/banner.png" width="720" alt="Airy Banner">
+  <img src="legacy\pygame_demo\assets\banner.png" width="720" alt="Airy Banner">
 </p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
